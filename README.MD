@@ -42,30 +42,32 @@ The tool is free and open source. However, if you use it commercially (ie to mak
 As of version 1.2, php libraries (or extensions) now can be embedded as needed. So, for example, if you're making an application that uses the gd extension, use the -e:php_gd2.dll option and you'll be fine. You can also use the EXTENSION command when working with bamcompile project files. You still have to have access to the php extension dll files when embedding of course, they are shipped together with the PHP distribution. But once you have compiled your exe, that's the only file you have to distribute! 
 Note however that some extensions use other system dlls which needs to be shipped together with your compiled exe to make it work.
 Some examples:
-> php_curl.dll needs libeay32.dll and ssleay32.dll 
-> php_mssql.dll needs ntwdblib.dll 
-> php_fribidi.dll needs fribidi.dll 
-> php_fdf.dll needs FDFTK.dll 
-> php_ifx.dll needs isqlt09a.dll 
-> php_mhash.dll needs ibmhash.dll 
-> php_msql.dll needs mSQL.dll
-
+```
+php_curl.dll needs libeay32.dll and ssleay32.dll 
+ php_mssql.dll needs ntwdblib.dll 
+ php_fribidi.dll needs fribidi.dll 
+ php_fdf.dll needs FDFTK.dll 
+ php_ifx.dll needs isqlt09a.dll 
+ php_mhash.dll needs ibmhash.dll 
+ php_msql.dll needs mSQL.dll
+```
  But most of them, such as GD, Sockets, Winbinder and Sqlite don't need any system dlls and they embed just fine.
  
  The following libraries are included statically:
-> Turck
-> MMCache 
-> bcmath 
-> calendar 
-> com 
-> ctype
-> ftp
-> mysql
-> odbc
-> pcre
-> win32std
-> xml zlib
-
+``` 
+ Turck
+ MMCache 
+ bcmath 
+ calendar 
+ com 
+ ctype
+ ftp
+ mysql
+ odbc
+ pcre
+ win32std
+ xml zlib
+```
 
  10. **Can I add a custom Icon to my exe?**
  Yes, use the -i:icon.ico command line option or the ICON project file command. 
