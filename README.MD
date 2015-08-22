@@ -8,7 +8,7 @@ Bambalam PHP EXE Compiler/Embedder
 > 
 > This software deserves a new chance.
 > I have tried many PHP "compilers" and since only Bamcompiler was great, despite the fact that it is completely obsolete. 
-> Although I don't have experience with compiling PHP, neither I know how everything was put together, I will give it a try. 
+> Although I don't have many experience with compiling, neither I know how everything was put together, I will give it a try. 
 > Help is very welcome!!! 
 
  1. **What is it?**
@@ -75,51 +75,68 @@ Some examples:
  12. **What is the format of Bamcompile Project files?**
  A project file has the extension .bcp and is built up using simple commands, one on each line:
 
+```
  MAINFILE mainfile.php
+``` 
 Sets the mainfile to whatever mainfile you want to use. 
 
+```
  OUTFILE outfile.exe
+```
 Sets the output file exe name. Optional.
 
- ICON icon.ico
+```ICON icon.ico```
 Sets an icon for the output exe file. Optional.
 
+```
  COMPRESS
+```
 Compresses final exe file with UPX
 
+```
  DONTENCODE
+```
 Do not encode php files
-
+```
  WINDOWED
+``` 
 Windowed application, removes the "dos box" otherwise shown
-
+```
  EMBED directory/file.php
  EMBED whole_directory
  EMBED directory/*.png
+```
 Used to embed files. You can embed single files, directories or files using a filters. Directories are embedded recursivly
 
+```
  DESTINATION destination_path/
+``` 
 Sets the destination path in the embedded filesystem. Use the destination command before an embed command to change where the embedded files end up. The default destination path is, of course, the root /.
 
+```
  EXTENSION path_to/extension.dll
+```
 Adds a PHP extension to the internal extension loader. The extension will be embedded and loaded from memory. 
 
  13. **License**
  Take a look at file **LICENSE**
 
 
-**"Usage":**
+**Usage:**
+```
    bamcompile [-options] infile.php [outfile.exe]
    bamcompile [-options] project_directory mainfile.php [outfile.exe]
    bamcompile projectfile.bcp
+```
 
 **Options:**
+```
     -w Hide console window for windowed applications
     -c Compress output exe (using UPX)
     -d Do not encode PHP files
     -e:extension.dll Embed and use PHP extension
     -i:icon.ico Add icon to exe
-
+```
 
 Revision history:
 -
