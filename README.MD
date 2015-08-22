@@ -119,3 +119,24 @@ Adds a PHP extension to the internal extension loader. The extension will be emb
     -d Do not encode PHP files
     -e:extension.dll Embed and use PHP extension
     -i:icon.ico Add icon to exe
+
+
+Revision history:
+-
+
+**1.21 2006-08-28:**
+Fixed an issue with apps using extensions crashing if php4ts.dll was in the system path
+
+**1.2 2006-08-24:**
+Added an extension loader - extension dll's can now be embedded
+Added a project file feature
+Added support for exe icons
+UPX is now embedded, it's no longer needed in the system path
+Added some examples of PHP applications
+Upgraded to PHP 4.4.4
+Fixed some compatibility issues when running on a system with PHP installed
+lots of minor bugfixes
+
+**1.1 2006-06-09:**
+Added the php_sockets extension to the static build
++ minor bugfixes
