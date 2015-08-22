@@ -5,6 +5,11 @@ Bambalam PHP EXE Compiler/Embedder
 > Anders Hammar. Latest official update was on 28th of August 2006. My
 > plans are to implement PHP5 support instead of obsolete PHP4 and
 > improve this software as well.
+> 
+> This software deserves a new chance.
+> I have tried many PHP "compilers" and since only Bamcompiler was great, depite the fact that it os completely obsolete. 
+> Although I don't have experience with compiling PHP, neither I know how everythin was put together, I will give it a try. 
+> Help is very welcome!!! 
 
  1. **What is it?**
  Bambalam PHP EXE Compiler/Embedder is a free command line tool to convert PHP applications to standalone Windows .exe applications. The exe files produced are totally standalone, no need for php dlls etc. The php code is encoded using the [Turck MMCache Encode library](http://turck-mmcache.sourceforge.net/) so it's a perfect solution if you want to distribute your application while protecting your source code. The converter is also suitable for producing .exe files for windowed PHP applications (created using for example the [WinBinder library](http://www.winbinder.com/)). It's also good for making stand-alone PHP Socket servers/clients (using the php_sockets.dll extension). 
@@ -100,7 +105,7 @@ Sets the destination path in the embedded filesystem. Use the destination comman
 Adds a PHP extension to the internal extension loader. The extension will be embedded and loaded from memory. 
 
  13. **License**
- Take a look at **LICENSE.MD**
+ Take a look at file **LICENSE**
 
 
 **"Usage":**
