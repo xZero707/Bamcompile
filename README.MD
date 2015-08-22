@@ -7,8 +7,8 @@ Bambalam PHP EXE Compiler/Embedder
 > improve this software as well.
 > 
 > This software deserves a new chance.
-> I have tried many PHP "compilers" and since only Bamcompiler was great, depite the fact that it os completely obsolete. 
-> Although I don't have experience with compiling PHP, neither I know how everythin was put together, I will give it a try. 
+> I have tried many PHP "compilers" and since only Bamcompiler was great, despite the fact that it is completely obsolete. 
+> Although I don't have experience with compiling PHP, neither I know how everything was put together, I will give it a try. 
 > Help is very welcome!!! 
 
  1. **What is it?**
