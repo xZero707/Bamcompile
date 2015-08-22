@@ -5,9 +5,6 @@ Bambalam PHP EXE Compiler/Embedder
 > Anders Hammar. Latest official update was on 28th of August 2006. My
 > plans are to implement PHP5 support instead of obsolete PHP4 and
 > improve this software as well.
-> 
-> I believe that this software deserves second chance. 
-> I have tried many PHP "compilers", but this one was most stable and easy to use. 
 
  1. **What is it?**
  Bambalam PHP EXE Compiler/Embedder is a free command line tool to convert PHP applications to standalone Windows .exe applications. The exe files produced are totally standalone, no need for php dlls etc. The php code is encoded using the [Turck MMCache Encode library](http://turck-mmcache.sourceforge.net/) so it's a perfect solution if you want to distribute your application while protecting your source code. The converter is also suitable for producing .exe files for windowed PHP applications (created using for example the [WinBinder library](http://www.winbinder.com/)). It's also good for making stand-alone PHP Socket servers/clients (using the php_sockets.dll extension). 
@@ -67,7 +64,7 @@ Some examples:
 
  10. **Can I add a custom Icon to my exe?**
  Yes, use the -i:icon.ico command line option or the ICON project file command. 
- 11. What about PHP.INI? Can I embed that as well?
+ 11. **What about PHP.INI? Can I embed that as well?**
  Yes, just include the php.ini in the root of your project. However, if you want to use extensions, use the internal extension loader instead. Older versions of Bamcompile used the embedded php.ini to load extensions but it was messy and honestly didn't work that well. You can still embed php.ini to set ini specific settings.
  
  12. **What is the format of Bamcompile Project files?**
@@ -106,7 +103,7 @@ Adds a PHP extension to the internal extension loader. The extension will be emb
  Take a look at **LICENSE.MD**
 
 
-*Usage:*
+**"Usage":**
    bamcompile [-options] infile.php [outfile.exe]
    bamcompile [-options] project_directory mainfile.php [outfile.exe]
    bamcompile projectfile.bcp
