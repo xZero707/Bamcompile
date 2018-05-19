@@ -1,10 +1,9 @@
-<?
-@$inifile = file_get_contents("res:///PHP/PHP.INI");
+<?php
 
-if($inifile)
-{
-$f = fopen("phpini.bam","w");
-fwrite($f,$inifile);
-fclose($f);
+@$iniFile = file_get_contents("res:///PHP/PHP.INI");
+
+if ($iniFile) {
+    $f = fopen("phpini.bam", "w");
+    fwrite($f, $iniFile);
+    fclose($f);
 }
-?>
