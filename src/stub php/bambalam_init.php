@@ -7,16 +7,19 @@ if (file_exists('phpini.bam')) {
 @$extensions = file_get_contents("res:///PHP/EXTENSIONS");
 
 if ($extensions) {
-    $dlls = explode(';', $extensions);
-    while (list(, $dll) = each($dlls)) {
-        $dlldata = file_get_contents($dll);
-        $dlldata = str_replace('php4ts.dll', 'void00.000', $dlldata);
-        dl_memory($dll, $dlldata);
+    $extensionFiles = explode(';', $extensions);
+
+    if ( ! empty($extensionFiles)) {
+        foreach ($extensionFiles as $key => $filename) {
+            $dllData = file_get_contents($filename);
+            $dllData = str_replace('php4ts.dll', 'void00.000', $dllData);
+            dl_memory($filename, $dllData);
+        }
     }
 }
 
-@$mainfile = file_get_contents("res:///PHP/MAIN");
+@$mainFile = file_get_contents("res:///PHP/MAIN");
 
-if ($mainfile) {
-    include($mainfile);
+if ($mainFile) {
+    include($mainFile);
 }
